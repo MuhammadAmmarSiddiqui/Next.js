@@ -33,12 +33,12 @@ export default function Header1(){
                     <GiHamburgerMenu className="bg-black text-white text-[24px] md:hidden"/>
                     <div className="text-white ml-4 md:ml-[100px] xl:ml-[200px] 2xl:ml-[300px] items-center hidden md:flex gap-8 md:justify-around text-[16px]">
                         <Link href='/' className="self-end">Home<IoEllipse  className="text-[#FF9F0D]"/></Link>
-                        <Link href='/' >Menu</Link>
-                        <Link href='/' >Blog</Link>
-                        <Link href='/' >Pages</Link>
-                        <Link href='/' className="flex">About<MdKeyboardArrowDown className="text-white items-end"/></Link>
-                        <Link href='/' >Shop</Link>
-                        <Link href='/' >Contact</Link>
+                        <Link href='/Menu' >Menu</Link>
+                        <Link href='/Blog' >Blog</Link>
+                        <Link href='/Pages' >Pages</Link>
+                        <Link href='/About' className="flex">About<MdKeyboardArrowDown className="text-white items-end"/></Link>
+                        <Link href='/Shop' >Shop</Link>
+                        <Link href='/Contact' >Contact</Link>
                         
                     </div>
                     <div className="order-last w-[336px] flex items-center">
