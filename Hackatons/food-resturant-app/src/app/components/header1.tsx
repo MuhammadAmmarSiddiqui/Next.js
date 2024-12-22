@@ -42,10 +42,10 @@ export default function Header1(){
                         
                     </div>
                     <div className="order-last w-[336px] flex items-center">
-                        <div className={`${inter.className} items-center border-[1px] border-[#FF9F0D] rounded-[27px] text-white/70 text-[16px] flex justify-around gap-x-10 px-4 py-2`}>Search...
+                        <div className={`${inter.className} items-center border-[1px] border-[#FF9F0D] rounded-[27px] text-white/70 text-[16px] flex md:justify-around gap-x-10 px-4 py-2 ml-12 md:ml-0`}>Search...
                         <IoSearchSharp className="text-white "/>
                         </div>
-                        <PiHandbagLight className="text-white bg-black text-[16px] ml-1" />
+                        <Link href='/Cart'><PiHandbagLight className="text-white bg-black text-[16px] ml-1" /></Link>
                         
                     </div>
                     

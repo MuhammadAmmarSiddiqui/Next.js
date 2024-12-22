@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 
@@ -7,7 +8,7 @@ export default function NotFound(){
     return(
         <div>
             <Navbar HomeClr="text-[#FF9F0D]"/>
-            <Hero />
+            <Hero heading="404 Error" data="404"/>
             
             <div className="w-full h-[582px] grid place-content-center">
                 <div>
@@ -23,6 +24,7 @@ export default function NotFound(){
 
 
             </div>
+            <Footer />
         </div>
     )
 }

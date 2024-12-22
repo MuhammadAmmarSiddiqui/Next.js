@@ -18,7 +18,7 @@ const Navbar = (props:CardProps)=>{
     const {HomeClr="text-white", MenuClr="text-white", BlogClr="text-white", PagesClr="text-white", AboutClr="text-white", ShopClr="text-white", ContactClr="text-white"} = props
     return(
         <div className="bg-black">
-            <div className="ml-4 md:ml-[100px] xl:ml-[200px] 2xl:ml-[300px] py-[29px] flex justify-between items-center">
+            <div className="ml-4 md:ml-[100px] xl:ml-[200px] 2xl:ml-[300px] py-[29px] pr-4 flex justify-between items-center">
                 <div>
                     <GiHamburgerMenu className="bg-black text-[#FF9F0D] text-[24px] lg:hidden"/>
                 </div>
@@ -36,8 +36,8 @@ const Navbar = (props:CardProps)=>{
                 </div>
                 <div className="flex gap-2 text-white text-[24px]">
                     <CiSearch />
-                    <GoPerson />
-                    <PiHandbagLight />
+                    <Link href='/SignUp'><GoPerson /></Link>
+                    <Link href='/Cart'><PiHandbagLight /></Link>
                 </div>
             </div>
             
