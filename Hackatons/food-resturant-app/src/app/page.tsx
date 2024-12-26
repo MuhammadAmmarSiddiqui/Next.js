@@ -5,6 +5,8 @@ import AboutUs from "./components/aboutUs";
 import Category from "./components/category";
 import WhyUs from "./components/whyUs";
 import Clients from "./components/clients";
+import Menu from "./components/menu";
+import Chef from "./components/chef";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Category />
       <WhyUs />
       <Clients />
+      <Menu />
+      <Chef />
     </div>
   );
 }
