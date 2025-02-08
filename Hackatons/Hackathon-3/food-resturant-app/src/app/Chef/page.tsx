@@ -28,7 +28,7 @@ export default async function Chefs(){
             <Hero heading="Our Chef" data="Chef"/>
             <div className="py-[120px] grid lg:grid-cols-3 xl:grid-cols-4 place-content-center">
                 {response.map((chef:any)=>{
-                    return <Card image={chef.imageUrl} name={chef.name}/>
+                    return <Card key={chef._id} image={chef.imageUrl} name={chef.name}/>
                 })}
 
                     {/* <Card image={chef1} name="Tahmina Rumi"/>

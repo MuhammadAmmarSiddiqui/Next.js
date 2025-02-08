@@ -9,14 +9,15 @@ import OrderList from "../components/orderlist";
 
 export default function Order(){
     const { user, isLoaded } = useUser();
-    console.log(user);
-    if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
-    if (!user) return <p>No user found.</p>;
-
     const [state, setState] = useState('bg-yellow-200 text-yellow-400');
     const [history, setHistory] = useState('bg-yellow-200/20 text-yellow-400/40');
     const [order, setOrder] = useState<{ _id: string, products: { _id: string, name: string, price: number }[], product_total: number, dateTime: string, status: string }[]>([]);
     // const [activeOrder, setActiveOrder] = useState([]);
+    //console.log(user);
+    if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
+    if (!user) return <p>No user found.</p>;
+
+    
     const ActiveOrder = async () => {
         setState('bg-yellow-200 text-yellow-400');
         setHistory('bg-yellow-200/20 text-yellow-400/40');

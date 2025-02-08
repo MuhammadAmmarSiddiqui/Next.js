@@ -21,13 +21,14 @@ import { useUser } from "@clerk/nextjs";
 
 export default function CheekOut(){
   const { user, isLoaded } = useUser();
+  const [subtotal, setSubtotal] = useState(0);
+  const [shipstate, setShipstate] = useState('hidden');
+  const [order, setOrder] = useState<Order>({} as Order);
 
   if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
   if (!user) return <p>No user found.</p>;
     // const user = await currentUser()
-    const [subtotal, setSubtotal] = useState(0);
-    const [shipstate, setShipstate] = useState('hidden');
-    const [order, setOrder] = useState<Order>({} as Order);
+  
     // const inputFName = useRef<HTMLInputElement>(null);
     // const inputLName = useRef<HTMLInputElement>(null);
    // const inputEmail = useRef<HTMLInputElement>(null);
