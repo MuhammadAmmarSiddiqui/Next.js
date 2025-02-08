@@ -21,10 +21,10 @@ export default function Category(){
                     <p className="mt-2 font-Helvetica text-[#FF9F0D] text-[48px] leading-[56px] font-bold text-center ">Ch<span className="text-white">oose Food Iteam</span></p>
                 </div>
                 <div className="mt-[56px] ml-4 md:ml-[100px] xl:ml-[200px] 2xl:[300px] grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8 relative">
-                    <Link href="/Shop"><Image src={spoon} alt='spoon-image'/></Link>
-                    <Link href="/Shop"><Image src={burger} alt='burger-image'/></Link>
-                    <Link href="/Shop"><Image src={fork} alt='fork-image'/></Link>
-                    <Link href="/Shop"><Image src={donut} alt='donut-image'/></Link>
+                    <Link href="/Shop"><Image src={spoon} alt='spoon-image' className="hover:border-yellow-300"/></Link>
+                    <Link href="/Shop"><Image src={burger} alt='burger-image' className="hover:border-yellow-300"/></Link>
+                    <Link href="/Shop"><Image src={fork} alt='fork-image' className="hover:border-yellow-300" /></Link>
+                    <Link href="/Shop"><Image src={donut} alt='donut-image' className="hover:border-yellow-300"/></Link>
                     <div className="ml-4 md:ml-[100px] xl:ml-[200px] 2xl:ml-[300px] absolute inset-0 bg-[url('/leaves.png')] bg-cover bg-left rotate-[76.86] opacity-20 before:content-[''] before:absolute before:inset-0"></div>
 
 

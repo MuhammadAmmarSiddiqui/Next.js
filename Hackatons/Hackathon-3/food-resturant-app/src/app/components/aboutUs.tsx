@@ -5,7 +5,6 @@ import eggimage from "../public/egg2.png"
 import sauce from "../public/sauce.png";
 import toast from "../public/toast.png";
 import eggImg from '../public/Image-egg.png';
-import Link from "next/link";
 const great =Great_Vibes({
     subsets:["latin"],
     weight:'400',
@@ -34,7 +33,7 @@ export default function AboutUs(){
                         <p className="ml-[10px] text-white font-normal text-[18px] leading-[26px]"> Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
                     
                     </div>
-                    <Link href="/Shop"><button className="rounded-[30px] bg-[#FF9F0D] w-[190px] h-[60px] mt-8 text-[16px] leading-6 text-white">Read More</button></Link>
+                    <button className="rounded-[30px] bg-[#FF9F0D] w-[190px] h-[60px] mt-8 text-[16px] leading-6 text-white">Read More</button>
                    
                 </div>
                 <div className="flex flex-col justify-between items-center mt-[10px] xl:mt-0">

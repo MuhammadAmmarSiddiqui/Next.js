@@ -57,7 +57,7 @@ export default function Header1(){
                         <p className="mt-2 font-Helvetica font-bold text-[60px] leading-[68px] text-[#FF9F0D]">Th<span className="text-white">e Art of speed food Quality</span></p>
                         <p className="mt-8 font-normal text-[16px] text-white leading-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Varius sed pharetra dictum neque massa congue</p>
-                        <button className="rounded-[30px] bg-[#FF9F0D] w-[190px] h-[60px] mt-8 text-[16px] leading-6 text-white">See Menu</button>
+                        <Link href="/Shop"><button className="rounded-[30px] bg-[#FF9F0D] w-[190px] h-[60px] mt-8 text-[16px] leading-6 text-white">See Menu</button></Link>
                     </div>
                     <div className="flex ">
                         <Image src={eggImg} alt="egg-image" className="w-[877px] h-[670px]"/>
