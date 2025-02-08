@@ -16,6 +16,8 @@ import Product from "../types/product";
 export default function Cart(){
 
       const [newcart, setNewcart] = useState<Product[]>([]);
+      const [subTotal, setSubTotal] = useState(0); // Store subtotal in state
+
       
       
   useEffect(() => {
@@ -42,11 +44,12 @@ export default function Cart(){
       setNewcart([]);
     }
   }, []);
-  let subTotal = newcart.reduce((acc, e) => acc + e.quantity * e.price, 0);
-  console.log(subTotal);
-  localStorage.setItem('subtot', JSON.stringify(subTotal));
-  console.log(localStorage.getItem('subtot'));
-   
+  useEffect(() => {
+    const total = newcart.reduce((acc, item) => acc + item.quantity * item.price, 0);
+    setSubTotal(total);
+    localStorage.setItem('subtot', JSON.stringify(total)); // Update localStorage safely
+  }, [newcart]);
+
     return(
         <div>
             <Navbar HomeClr="text-[#FF9F0D]"/>
