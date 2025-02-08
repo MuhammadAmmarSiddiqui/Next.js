@@ -14,14 +14,18 @@ export default function Order(){
     const [order, setOrder] = useState<{ _id: string, products: { _id: string, name: string, price: number }[], product_total: number, dateTime: string, status: string }[]>([]);
     // const [activeOrder, setActiveOrder] = useState([]);
     //console.log(user);
-    if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
-    if (!user) return <p>No user found.</p>;
+    // if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
+    // if (!user) return <p>No user found.</p>;
 
     
     const ActiveOrder = async () => {
         setState('bg-yellow-200 text-yellow-400');
         setHistory('bg-yellow-200/20 text-yellow-400/40');
-        const activeData = await client.fetch(`*[_type == "order" && customer._ref == *[_type == "customer" && email == "${user.primaryEmailAddress?.emailAddress}" ][0]._id && status == "pending"]{
+        if (!user || !user.primaryEmailAddress) {
+            console.error("User or user's primary email address is not available.");
+            return;
+        }
+        const activeData = await client.fetch(`*[_type == "order" && customer._ref == *[_type == "customer" && email == "${user.primaryEmailAddress.emailAddress}" ][0]._id && status == "pending"]{
             _id, products, product_total, dateTime, status}`);
             console.log(activeData);
             setOrder(activeData);
@@ -31,6 +35,10 @@ export default function Order(){
     const OrderHistory = async () => {
         setState('bg-yellow-200/20 text-yellow-400/40');
         setHistory('bg-yellow-200 text-yellow-400');
+        if (!user || !user.primaryEmailAddress) {
+            console.error("User or user's primary email address is not available.");
+            return;
+        }
         const HistoryData = await client.fetch(`*[_type == 'order' && status == 'shipped' && customer._ref == '${user.id}']{
             _id, products, product_total, dateTime, status}`);
             setOrder(HistoryData);
@@ -38,6 +46,8 @@ export default function Order(){
 useEffect(() => {
     ActiveOrder();
 }, [])
+        // if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
+        // if (!user) return <p>No user found.</p>;
 
     return(
         <div>

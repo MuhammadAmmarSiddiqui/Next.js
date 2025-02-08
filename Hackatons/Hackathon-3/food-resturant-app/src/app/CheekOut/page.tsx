@@ -25,8 +25,8 @@ export default function CheekOut(){
   const [shipstate, setShipstate] = useState('hidden');
   const [order, setOrder] = useState<Order>({} as Order);
 
-  if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
-  if (!user) return <p>No user found.</p>;
+  // if (!isLoaded) return <p>Loading...</p>; // Prevent errors while loading
+  // if (!user) return <p>No user found.</p>;
     // const user = await currentUser()
   
     // const inputFName = useRef<HTMLInputElement>(null);
@@ -58,6 +58,10 @@ export default function CheekOut(){
         const inputaddress1 = inputAddress1?.current?.value as string;
         const inputaddress2 = inputAddress2?.current?.value as string;
         const inputzipcode = inputZipcode?.current?.value as string;
+        if (!user || !user.primaryEmailAddress) {
+          console.error("User or user's primary email address is not available.");
+          return;
+      }
         const response:any = await client.fetch(`*[_type=="customer" && email == "${user.primaryEmailAddress?.emailAddress}"]{_id}`)
         // const inputcompany = inputCompany?.current?.value as string;
         
