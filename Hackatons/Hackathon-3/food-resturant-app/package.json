@@ -1,0 +1,44 @@
+{
+  "name": "food-resturant-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/express": "^1.3.46",
+    "@clerk/nextjs": "^6.10.2",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.70.0",
+    "@stripe/stripe-js": "^5.6.0",
+    "axios": "^1.7.9",
+    "next": "^15.1.6",
+    "next-sanity": "^9.8.38",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-toastify": "^11.0.3",
+    "sanity": "^3.70.0",
+    "shipengine": "^1.0.7",
+    "shippo": "^2.14.1",
+    "stripe": "^17.6.0",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "eslint": "^8",
+    "eslint-config-next": "^15.1.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3"
+  }
+}
